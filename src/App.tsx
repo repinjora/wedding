@@ -5,6 +5,7 @@ import Countdown from "./components/Countdown";
 import Hero from "./components/Hero";
 import Intro from "./components/Intro";
 import Invitation from "./components/Invitation";
+import ProposalMemory from "./components/ProposalMemory";
 import Rsvp from "./components/Rsvp";
 import SoundControl from "./components/SoundControl";
 import Venue from "./components/Venue";
@@ -78,6 +79,7 @@ export default function App() {
       {stage !== "intro" && (
         <main className="story">
           <Hero go={stage === "story"} />
+          <ProposalMemory />
           <Invitation />
           <Venue />
           <Countdown />

@@ -907,6 +907,135 @@ button {
   text-shadow: 0 0 30px rgba(214, 185, 136, 0.35), 0 2px 22px rgba(0, 0, 0, 0.8);
 }
 
+/* ============ ПАМЯТЬ О ПРЕДЛОЖЕНИИ ============ */
+.proposal {
+  max-width: 760px;
+  padding-top: 13svh;
+  padding-bottom: 14svh;
+}
+.proposal-copy {
+  max-width: 34rem;
+  margin: 0 auto 3rem;
+}
+.proposal-copy .eyebrow {
+  margin-bottom: 1.4rem;
+}
+.proposal-title {
+  margin: 0 0 1.25rem;
+  font-family: var(--display);
+  font-size: clamp(2.2rem, 8vw, 3.7rem);
+  line-height: 1.08;
+  font-weight: 400;
+  color: var(--silver-hi);
+  text-shadow: 0 0 32px rgba(170, 200, 255, 0.2);
+}
+.proposal-text {
+  max-width: 31rem;
+  margin: 0 auto;
+  color: var(--silver);
+  font-family: var(--display);
+  font-size: clamp(1.15rem, 4.8vw, 1.5rem);
+  line-height: 1.55;
+  text-wrap: balance;
+}
+.proposal-film {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+.proposal-frame {
+  position: relative;
+  width: min(100%, 24rem);
+  max-height: 72svh;
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid rgba(214, 185, 136, 0.56);
+  border-radius: 48% 48% 22px 22px / 25% 25% 22px 22px;
+  background: #07101d;
+  box-shadow: 0 26px 90px rgba(0, 0, 0, 0.55), 0 0 55px rgba(214, 185, 136, 0.1);
+}
+.proposal-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background: #07101d;
+}
+.proposal-film-shade {
+  position: absolute;
+  z-index: 1;
+  inset: 35% 0 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(3, 5, 10, 0.76));
+}
+.proposal-film-caption {
+  position: absolute;
+  z-index: 2;
+  left: 1.4rem;
+  right: 4.2rem;
+  bottom: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  text-align: left;
+  pointer-events: none;
+}
+.proposal-film-caption span {
+  color: var(--gold-soft);
+  font-size: 0.55rem;
+  letter-spacing: 0.22em;
+}
+.proposal-film-caption strong {
+  color: var(--silver-hi);
+  font-family: var(--display);
+  font-size: 1.55rem;
+  font-weight: 400;
+}
+.proposal-control {
+  position: absolute;
+  z-index: 3;
+  right: 1.1rem;
+  bottom: 1.2rem;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(214, 185, 136, 0.64);
+  border-radius: 50%;
+  color: var(--gold-soft);
+  background: rgba(6, 12, 26, 0.64);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+.proposal-control svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.proposal-control:not(.is-playing) svg path {
+  fill: currentColor;
+  stroke: none;
+}
+.proposal-control:focus-visible {
+  outline: 2px solid var(--silver-hi);
+  outline-offset: 4px;
+}
+.proposal-note {
+  margin: 1.35rem 0 0;
+  color: rgba(205, 214, 227, 0.64);
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
 /* ============ СЦЕНА 4: ДАТА И МЕСТО ============ */
 .venue-card {
   position: relative;
